@@ -1,0 +1,39 @@
+server:
+  port: 8080 #指定启动端口号
+
+spring:
+  application:
+    name: prod-service
+  profiles: prod #生产环境
+  mail:
+    host: smtp.exmail.qq.com
+    username: mail@point9.cn # 这里填写企业邮箱
+    password: Mw961124 # 这里填写企业邮箱登录密码
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+      mail.smtp.socketFactory.fallback: false
+      mail.smtp.socketFactory.port: 465
+    default-encoding: utf-8
+    from: mail@point9.cn # 发送邮件的地址，和上面username一致
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
+    url: jdbc:mysql://134.175.3.4:3306/tellbook?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: tellbook
+    password: tellbook
+
+#mybatis:
+#  mapper-locations: classpath*:/mapper/**Mapper.xml
+#  typeAliasesPackage: com.test.domain
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    cache-enabled: false
+
+logging:
+  file: prod-service.log
+  level:
+    com.test: debug
+
+logback:
+  logDir: /app/data/log/tellbook

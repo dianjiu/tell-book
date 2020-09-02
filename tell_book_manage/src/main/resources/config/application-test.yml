@@ -1,0 +1,47 @@
+server:
+  port: 18090 #指定启动端口号
+
+spring:
+  application:
+    name: test-service
+  profiles:
+    active: test #测试环境
+  mail:
+    host: smtp.exmail.qq.com
+    username: mail@point9.cn # 这里填写企业邮箱
+    password: Mw961124 # 这里填写企业邮箱登录密码
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+      mail.smtp.socketFactory.fallback: false
+      mail.smtp.socketFactory.port: 465
+    default-encoding: utf-8
+    from: mail@point9.cn # 发送邮件的地址，和上面username一致
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
+    url: jdbc:mysql://134.175.3.4:3306/tellbook?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: tellbook
+    password: tellbook
+
+#mybatis:
+#  mapper-locations: classpath*:/mapper/**Mapper.xml    #把xml文件放在com.XX.mapper.*中可能会出现找不到的问题，这里把他放在resource下的mapper中
+#  typeAliasesPackage: com.test.domain        #这里是实体类的位置，#实体扫描，多个package用逗号或者分号分隔
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    cache-enabled: false
+
+logging:
+  file: test-service.log
+  level:
+    com.test: debug
+
+logback:
+  logDir: /app/data/log/tellbook
+#自己定义的配置
+test:
+  name:
+  password:
+  testmodel:
+    id: 1
+    host-port: 127.0.0.1:8080

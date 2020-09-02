@@ -1,0 +1,35 @@
+server:
+  port: 18090 #指定启动端口号
+spring:
+  application:
+    name: local-service
+  profiles: local #开发环境
+  mail:
+    host: smtp.163.com
+    username: tellbookmanage@163.com
+    password: Limw123
+    properties.mail.smtp.port: 25
+    default-encoding: utf-8
+    from: tellbookmanage@163.com # 发送邮件的地址，和上面username一致
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
+    url: jdbc:mysql://134.175.3.4:3306/tellbook?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: tellbook
+    password: tellbook
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logback:
+  logDir: log/local
+
+logging:
+  level:
+    cn.point9.mybatisplus.service.impl: trace
+    cn.point9.mybatisplus..controller: trace
+
+
+
