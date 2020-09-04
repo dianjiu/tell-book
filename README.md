@@ -4,9 +4,9 @@
 
 学习Springboot+Mybatis-Plus
 
-最新文档：[TellBookManage How Run By Point9](https://note.youdao.com/ynoteshare1/index.html?id=f24d3ae924a7586049652508fac0ba63&type=note)
+最新文档：[TellBookManage How Run By DianJiu](https://note.youdao.com/ynoteshare1/index.html?id=f24d3ae924a7586049652508fac0ba63&type=note)
 
-演示地址：[tellbook.point9.top](http://tellbook.point9.top)
+演示地址：[tellbook.dianjiu.org.cn](https://tellbook.dianjiu.org.cn)
 
 用户名：admin
 
@@ -20,7 +20,10 @@
 - swagger2
 - thymeleaf
 - h-ui.admin+jquery+ajax
+
 ## 3、 功能介绍
+### V1.0已完成功能
+
 ### V2.0待实现功能
 - [ ] 实现多条件查询分页展示数据
 - [ ] 实现批量删除功能
@@ -30,8 +33,7 @@
 - [ ] 新增部门管理
 - [ ] 新增权限系统
 - [ ] 新增员工工资邮件定时发送功能
-### V1.0已完成功能
-[通讯录管理系统V1.0--详细功能描述](http://1t.click/aGJN)
+
 # 二、项目截图
 
 ### 用户登录页面
@@ -75,15 +77,21 @@
 ### 客户发送邮件页面
 ![image](http://point9.top/wp-content/uploads/2019/10/image20.png)
 ![image](http://point9.top/wp-content/uploads/2019/10/21.jpg)
-# 三、源码下载
-### 码云地址：[gitee.com/point9/tellbook](https://gitee.com/point9/tellbook) 
 
-### Github地址：[github.com/dianjiu/tellbook](https://github.com/dianjiu/tellbook) 
+# 三、源码下载
+### Gitee地址：[gitee.com/dianjiu/tell-book](https://gitee.com/dianjiu/tell-book) 
+
+### Github地址：[github.com/dianjiu/tell-book](https://github.com/dianjiu/tell-book) 
 
 # 四、关于点九
 
-[point9.cn](https://point9.cn) 点九博客个人主页
+点九博客   [dianjiu.top](https://dianjiu.top) 
 
-[point9.top](http://point9.top) 点九项目演示环境
+码农点九   [dianjiu.co](https://dianjiu.co) 
+
+点九开源   [dianjiu.org.cn](https://dianjiu.org.cn) 
+
+点九科技   [dianjiu.net.cn](https://dianjiu.net.cn) 
+
 
 
