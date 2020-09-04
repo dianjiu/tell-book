@@ -2,12 +2,6 @@
  * Created by limengwei on 2019-08-27
  **/
 
-import com.baomidou.mybatisplus.generator.AutoGenerator;
-import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
-import com.baomidou.mybatisplus.generator.config.GlobalConfig;
-import com.baomidou.mybatisplus.generator.config.PackageConfig;
-import com.baomidou.mybatisplus.generator.config.StrategyConfig;
-import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 /**
  * <p>
@@ -23,7 +17,7 @@ public class MpGenerator {
      * MySQL 生成演示
      * </p>
      */
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         AutoGenerator mpg = new AutoGenerator();
         // 选择 freemarker 引擎，默认 Veloctiy
         //mpg.setTemplateEngine(new FreemarkerTemplateEngine());
@@ -72,7 +66,7 @@ public class MpGenerator {
 
         // 执行生成
         mpg.execute();
-    }
+    }*/
 
 }
 

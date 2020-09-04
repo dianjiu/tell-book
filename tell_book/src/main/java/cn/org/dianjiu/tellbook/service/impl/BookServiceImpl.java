@@ -1,6 +1,7 @@
 package cn.org.dianjiu.tellbook.service.impl;
 
-import cn.point9.tell_book_manage.dao.BookMapper;
+
+import cn.org.dianjiu.tellbook.dao.BookMapper;
 import cn.org.dianjiu.tellbook.entity.Book;
 import cn.org.dianjiu.tellbook.pojo.req.BookReq;
 import cn.org.dianjiu.tellbook.service.IBookService;

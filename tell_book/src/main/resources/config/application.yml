@@ -1,7 +1,7 @@
 #默认环境(开发环境)
 spring:
   profiles:
-    active: test
+    active: ${cfg.env}
   thymeleaf:
     cache: false
     prefix: classpath:/templates/
@@ -19,9 +19,9 @@ spring:
 mybatis-plus:
   # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
   # 如果是放在resource目录 classpath:/mapper/*Mapper.xml
-  mapper-locations: classpath:cn/point9/tell_book_manage/dao/mapper/*Mapper.xml
+  mapper-locations: classpath:cn/org/dianjiu/tellbook/dao/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: cn.point9.tell_book_manage.entity,cn.point9.tell_book_manage.pojo.*
+  typeAliasesPackage: cn.org.dianjiu.tellbook.entity,cn.org.dianjiu.tellbook.pojo.*
   global-config:
     #刷新mapper 调试神器
     db-config:

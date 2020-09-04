@@ -23,7 +23,7 @@ public class SwaggerConfigure {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("cn.point9.tell_book_manage.controler"))
+                .apis(RequestHandlerSelectors.basePackage("cn.org.dianjiu.tellbook.controler"))
                 .paths(PathSelectors.any())
                 .build();
     }

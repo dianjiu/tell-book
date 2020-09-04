@@ -24,7 +24,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 logback:
-  logDir: log/local
+  logDir: /data/log/local
 
 logging:
   level:

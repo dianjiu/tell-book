@@ -9,13 +9,13 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.point9</groupId>
-    <artifactId>tell_book_manage</artifactId>
+    <artifactId>tell_book</artifactId>
     <version>1.0.1-SNAPSHOT</version>
-    <name>tell_book_manage</name>
+    <name>tell_book</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
@@ -130,7 +130,7 @@
                 <directory>src/main/java</directory>
                 <filtering>false</filtering>
                 <includes>
-                    <include>**/mapper/*.xml</include>
+                    <include>cn/org/dianjiu/tellbook/dao/mapper/*Mapper.xml</include>
                 </includes>
             </resource>
         </resources>

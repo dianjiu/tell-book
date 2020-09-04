@@ -14,7 +14,7 @@ import java.util.Properties;
  **/
 @EnableTransactionManagement
 @Configuration
-@MapperScan("cn.point9.tell_book_manage.dao")
+@MapperScan("cn.org.dianjiu.tellbook.dao")
 public class MybatisPlusConfig {
     /**
      * mybatis-plus 分页插件

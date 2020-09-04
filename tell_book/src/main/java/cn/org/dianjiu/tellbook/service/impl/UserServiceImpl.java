@@ -1,6 +1,6 @@
 package cn.org.dianjiu.tellbook.service.impl;
 
-import cn.point9.tell_book_manage.dao.UserMapper;
+import cn.org.dianjiu.tellbook.dao.UserMapper;
 import cn.org.dianjiu.tellbook.entity.User;
 import cn.org.dianjiu.tellbook.service.IUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
