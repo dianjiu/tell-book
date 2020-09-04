@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.point9.tell_book_manage.dao.BookMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.org.dianjiu.tellbook.entity.Book">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="tell" property="tell" />
+        <result column="email" property="email" />
+        <result column="addr" property="addr" />
+        <result column="user_code" property="userCode" />
+        <!--封装关联属性-->
+        <!--<association property="productType" javaType="ProductType">
+            <id column="pid" property="id" />
+            <result column="pname" property="name" />
+        </association>-->
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, tell, email, addr, user_code
+    </sql>
+
+    <!--分页数据总的条数-->
+    <select id="queryPageCount" resultType="long" parameterType="BookReq">
+        SELECT
+        count(b.id)
+        FROM
+        t_book b
+        LEFT JOIN t_user u ON b.user_code = u.id
+        <include refid="whereSql"/>
+
+    </select>
+
+    <!--当前页的分页数据-->
+    <select id="queryPageList" parameterType="BookReq" resultMap="BaseResultMap">
+        SELECT
+        b.id,
+        b.name,
+        b.tell,
+        b.email,
+        b.addr
+        FROM
+        t_book b
+        LEFT JOIN t_user u ON b.user_code = u.id
+        <include refid="whereSql"/>
+        limit #{page},#{size}
+    </select>
+
+    <!--带条件查询-->
+    <sql id="whereSql">
+        <where>
+            <if test="userCode!=null and userCode!=''">
+                b.user_code is not null and b.user_code=#{userCode}
+            </if>
+        </where>
+    </sql>
+</mapper>
